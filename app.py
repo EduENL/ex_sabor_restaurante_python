@@ -1,41 +1,103 @@
 import os
-import json
-import sys
-from modelos.restaurante import Restaurantes
-from modelos.avaliacao import Avaliacao
 
-def get_data_dir()
-    if getattr(sys, 'frozen', False)
-        return os.path.dirname(sys.executable)
-    else:
-        return os.path.dirname(os.path.abspath(__file__))
+restaurantes = [{'nome':'Praça','categoria': 'Japonesa', 'ativo': False},
+                {'nome':'Pizza suprema','categoria': 'Pizza', 'ativo': True},
+                {'nome':'Cantina','categoria': 'Italiano', 'ativo': False}]
 
-ARQUIVO_DADOS = os.path.join(get_data_dir(), 'dados_restaurantes.json')
+def exibir_nome_do_programa():
+    print("""
+          Sabor express
+          """)
+    
+def exibir_opcoes():
+    print('1. Cadastrar restaurante')
+    print('2. Listar restaurante')
+    print('3. Alternar estado do restaurante')
+    print('4. Sair\n')
 
-def carregar_dados():
+def finalizar_app():
+    exibir_subtitulo('Finalizando o app\n')
+
+def voltar_ao_menu_principal():
+    input('\nDigite uma tecla para voltar ao menu principal')
+    main()
+
+def opcao_invalida():
+    print('Opcao inválida!\n')
+    voltar_ao_menu_principal()
+
+def exibir_subtitulo(texto):
+    os.system('cls')
+    linha = '*' * (len(texto))
+    print(linha)
+    print(texto)
+    print(linha)
+    print()
+
+def cadastrar_novo_restaurante():
+    exibir_subtitulo('Cadastro de novos restaurantes\n')
+    nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
+    categoria = input(f'Digite o nome da categoria do restaurante {nome_do_restaurante}:')
+    dados_do_restaurante = {'nome':nome_do_restaurante, 'categoria':categoria, 'ativo':False}
+    restaurantes.append(dados_do_restaurante)
+    print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!')
+
+    voltar_ao_menu_principal()
+
+def alternar_estado_do_restaurante():
+    exibir_subtitulo('Alterando estado do restaurante\n')
+    nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
+    restaurante_encontrado = False
+
+    for restaurante in restaurantes:
+        if nome_restaurante == restaurante['nome']:
+            restaurante_encontrado = True
+            restaurante['ativo'] = not restaurante['ativo']
+            mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso!' if restaurante['ativo'] else f'O restaurante {nome_restaurante} foi desativado com sucesso!'
+            print(mensagem)
+
+    if not restaurante_encontrado:
+        print('O restaurante não foi encontrado!')
+
+    voltar_ao_menu_principal()
+
+def listar_restaurantes():
+    exibir_subtitulo('Listando restaurantes\n')
+
+    print(f'{'nome_restaurante'.ljust(21)} | {'categoria'.ljust(20)} | Status')
+    for restaurante in restaurantes:
+        nome_restaurante = restaurante['nome']
+        categoria = restaurante['categoria']
+        ativo = 'ativado' if restaurante['ativo'] else 'desativado'
+        print(f'-{nome_restaurante.ljust(20)} | {categoria.ljust(20)} | {ativo}')
+
+    voltar_ao_menu_principal()
+
+def escolher_opcao():
     try:
-        with open(ARQUIVO_DADOS, 'r', encoding='utf-8') as arquivo:
-            dados = json.load(arquivo)
-            Restaurante.restaurantes.clear()
-            for restaurante_dados in dados:
-                restaurante = Restaurante(
-                    restaurante_dados['nome']
-                    restaurante_dados['categoria']
-                )
-                restaurante._ativo = restaurante_dados['ativo']
-                restaurante._avaliacao = [Avaliacao(**avaliacao) for avaliacao in restaurante_dados ['avaliacao']]
-    except FileNotFoundError:
-        print(f"Arquivo de dados não encontrado. Criando um novo arquivo em {ARQUIVO_DADOS}")
-        salvar_dados()
+        opcao_escolhida = int(input('Escolha uma opção: '))
 
-def salvar_dados():
-    dados = []
-    for restaurante in Restaurante.restaurantes
-        dados.append({
-            'nome': restaurante._nome,
-            'categoria': restaurante._categoria,
-            'ativo': restaurante._ativo,
-            'avaliacao': [avaliacao.__dict__() for avaliacao in restaurante._avaliacao]
-        })
-    with open(ARQUIVO_DADOS, 'w', encoding='utf-8') as arquivo:
-        json.dump(dados, arquivo, indent=4, ensure_ascii=False)
+        if opcao_escolhida == 1:
+            cadastrar_novo_restaurante()
+        elif opcao_escolhida == 2:
+            listar_restaurantes()
+        elif opcao_escolhida == 3:
+            alternar_estado_do_restaurante()
+        elif opcao_escolhida == 4:
+            finalizar_app()
+        else:
+            opcao_invalida()
+    except:
+        opcao_invalida()
+
+def main():
+    """
+    Função principal que inicia o programa
+    """
+    os.system('cls')
+    exibir_nome_do_programa()
+    exibir_opcoes()
+    escolher_opcao()
+
+if __name__ == '__main__':
+    main()
