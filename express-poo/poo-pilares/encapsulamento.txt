@@ -1,0 +1,23 @@
+1. Atributos Protegidos (Prefixados com _)
+
+Arquivo avaliacao.py:
+
+self._cliente e self._nota na classe Avaliacao são atributos protegidos.
+
+Arquivo estabelecimento.py:
+
+self._nome, self._categoria, self._ativo e self._avaliacoes na classe Estabelecimento são atributos protegidos.
+Arquivo restaurante.py:
+
+Atributos como self._avaliacoes são herdados e utilizados na classe Restaurante, que herda da classe Estabelecimento.
+2. Métodos e Propriedades Encapsulados
+Métodos que operam em atributos protegidos, fornecendo uma interface controlada para interagir com esses atributos.
+
+Arquivo estabelecimento.py:
+
+@property def ativo(self): encapsula o acesso ao atributo _ativo, controlando como o estado do estabelecimento é exposto.
+def alternar_estado(self): é um método que altera o estado de _ativo, encapsulando a lógica de como o estado do estabelecimento é alternado.
+@property def media_avaliacoes(self): encapsula a lógica de cálculo da média de avaliações, permitindo o acesso ao resultado sem expor diretamente a lista _avaliacoes.
+3. Encapsulamento no Método __dict__ em avaliacao.py
+Arquivo avaliacao.py:
+O método __dict__(self) encapsula a lógica de como a instância da classe Avaliacao é convertida em um dicionário. Isso é útil, por exemplo, para serialização JSON, e protege o acesso direto aos atributos _cliente e _nota.

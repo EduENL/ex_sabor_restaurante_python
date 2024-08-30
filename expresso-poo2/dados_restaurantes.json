@@ -1,0 +1,78 @@
+[
+    {
+        "nome": "Sabor Caseiro",
+        "categoria": "COMIDA CASEIRA",
+        "ativo": true,
+        "avaliacao": []
+    },
+    {
+        "nome": "Cantina Italiana",
+        "categoria": "ITALIANA",
+        "ativo": false,
+        "avaliacao": []
+    },
+    {
+        "nome": "Sushi Zen",
+        "categoria": "JAPONESA",
+        "ativo": true,
+        "avaliacao": [
+            {
+                "cliente": "Ignacio",
+                "nota": 10.0
+            },
+            {
+                "cliente": "Vavá",
+                "nota": 8.0
+            },
+            {
+                "cliente": "Denis",
+                "nota": 5.0
+            }
+        ]
+    },
+    {"nome": "Restaurante A", "categoria": "Categoria A", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante B", "categoria": "Categoria B", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante C", "categoria": "Categoria C", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante D", "categoria": "Categoria D", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante E", "categoria": "Categoria E", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante F", "categoria": "Categoria F", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante G", "categoria": "Categoria G", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante H", "categoria": "Categoria H", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante I", "categoria": "Categoria I", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante J", "categoria": "Categoria J", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante K", "categoria": "Categoria K", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante L", "categoria": "Categoria L", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante M", "categoria": "Categoria M", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante N", "categoria": "Categoria N", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante O", "categoria": "Categoria O", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante P", "categoria": "Categoria P", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante Q", "categoria": "Categoria Q", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante R", "categoria": "Categoria R", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante S", "categoria": "Categoria S", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante T", "categoria": "Categoria T", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante U", "categoria": "Categoria U", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante V", "categoria": "Categoria V", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante W", "categoria": "Categoria W", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante X", "categoria": "Categoria X", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante Y", "categoria": "Categoria Y", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante Z", "categoria": "Categoria Z", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante AA", "categoria": "Categoria AA", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante BB", "categoria": "Categoria BB", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante CC", "categoria": "Categoria CC", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante DD", "categoria": "Categoria DD", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante EE", "categoria": "Categoria EE", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante FF", "categoria": "Categoria FF", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante GG", "categoria": "Categoria GG", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante HH", "categoria": "Categoria HH", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante II", "categoria": "Categoria II", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante JJ", "categoria": "Categoria JJ", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante KK", "categoria": "Categoria KK", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante LL", "categoria": "Categoria LL", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante MM", "categoria": "Categoria MM", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante NN", "categoria": "Categoria NN", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante OO", "categoria": "Categoria OO", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante PP", "categoria": "Categoria PP", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante QQ", "categoria": "Categoria QQ", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante RR", "categoria": "Categoria RR", "ativo": false, "avaliacao": []},
+    {"nome": "Restaurante SS", "categoria": "Categoria SS", "ativo": false, "avaliacao": []}
+]
